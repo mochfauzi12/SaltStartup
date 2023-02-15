@@ -29,6 +29,7 @@ func main() {
 	api := router.Group("/api/z1")
 
 	api.POST("/users", userHandler.RegisterUser)
+	//web router
 
 	router.Run()
 
