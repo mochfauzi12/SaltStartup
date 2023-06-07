@@ -46,9 +46,18 @@ func (h *userHandler) RegisterUser(c *gin.Context) {
 	}
 
 	//token
-	formatter := user.FormatUser(newUser, "tokenTokenToket")
+	formatter := user.FormatUser(newUser, "tokenToken")
 
 	response := helper.APIResponse("Account has been Registered", http.StatusOK, "Success", formatter)
 	c.JSON(http.StatusOK, response)
 
+}
+
+func (h *userHandler) Login(c *gin.Context) {
+	// user memasukkan input (email & password)
+	// input di tangkap handler
+	// mapping dari input user ke input struct
+	// input struct passing service
+	// di service mencari bantuan dengan bantuan repository user dengan email
+	// mencocokkan email
 }
